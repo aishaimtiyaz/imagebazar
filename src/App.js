@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+
+import React,{useState} from "react";
 import './App.css';
+import ListImage from './components/listImage';
+import SearchImage from './components/searchImage';
 
 function App() {
+  const [images,setImages] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <SearchImage setImages={setImages}/>
+     <ListImage images={images}/>
     </div>
   );
 }
