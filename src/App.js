@@ -9,8 +9,11 @@ function App() {
 
   return (
     <div className="App">
-     <SearchImage setImages={setImages}/>
-     <ListImage images={images}/>
+      <div className="SearchImage"><SearchImage images={images} setImages={setImages}/></div>
+
+      <div> <ListImage images={images}/> </div>
+
+      <div className="footer">@copyright</div>
     </div>
   );
 }

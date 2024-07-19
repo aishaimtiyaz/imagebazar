@@ -2,15 +2,18 @@
 
 const ListImage =({images})=>{
     return(
-        <div>
+        <div className="imageList">
         {
                 images.map(value => (
                    <img 
-                       src={value.urls.thumb} alt={value.alt_description}
+                       src={value.urls.small} alt={value.alt_description}
                    />
                      
                 ))
+
+             
             }
+            
         </div>
     )
 }
